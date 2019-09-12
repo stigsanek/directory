@@ -4,6 +4,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
   font-size: 15px;
+  color: #000000;
   background-color: #ffffff;
 }
 
@@ -62,7 +63,7 @@ body {
 
 .main-form__search {
   width: 200px;
-  height: 35px;
+  height: 36px;
   padding: 8px;
   font-size: 13px;
   border-radius: 0;
@@ -73,7 +74,7 @@ body {
 
 .main-form__search:hover,
 .main-form__search:focus {
-  border: 2px solid #dddddd;
+  border: 2px solid #cccccc;
 }
 
 .worker-list,
@@ -101,6 +102,7 @@ body {
 
 .filter-button__item,
 .main-form__button {
+  height: 36px;
   padding: 10px;
   font-size: 13px;
   background-color: #eeeeee;
@@ -111,7 +113,7 @@ body {
 .filter-button__item:focus,
 .main-form__button:hover,
 .main-form__button:focus {
-  background-color: #dddddd;
+  background-color: #cccccc;
   -webkit-transform: scale(1.05);
       -ms-transform: scale(1.05);
           transform: scale(1.05);
@@ -125,7 +127,7 @@ body {
 .filter-button__item:active,
 .main-form__button:active,
 .arrow-top:active {
-  background-color: #3ab0e2 !important;
+  background-color: #0099ff !important;
   -webkit-transform: scale(1.05);
       -ms-transform: scale(1.05);
           transform: scale(1.05);
@@ -133,7 +135,7 @@ body {
 }
 
 .filter-button__item--active {
-  background-color: #3ab0e2 !important;
+  background-color: #0099ff !important;
   -webkit-transform: scale(1.05);
       -ms-transform: scale(1.05);
           transform: scale(1.05);
@@ -223,7 +225,7 @@ body {
 }
 
 .worker-item__name--mark {
-  background-color: #3ab0e2;
+  background-color: #0099ff;
   color: #ffffff;
 }
 
@@ -329,7 +331,7 @@ body {
 .arrow-top {
   position: fixed;
   top: 15px;
-  background-color: #dddddd;
+  background-color: #eeeeee;
   border: none;
   color: #ffffff;
   font-size: 35px;
