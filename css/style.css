@@ -63,6 +63,9 @@ body {
 .main-form__search {
   width: 200px;
   padding: 8px;
+  font-size: 13px;
+  line-height: 1;
+  border-radius: 0;
   border: 2px solid #eeeeee;
   background-color: transparent;
   -webkit-appearance: none;
