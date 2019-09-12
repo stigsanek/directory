@@ -4,6 +4,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
   font-size: 15px;
+  background-color: #ffffff;
 }
 
 .visually-hidden {
@@ -62,6 +63,14 @@ body {
 .main-form__search {
   width: 200px;
   padding: 8px;
+  border: 2px solid #eeeeee;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+
+.main-form__search:hover,
+.main-form__search:focus {
+  border: 2px solid #dddddd;
 }
 
 .worker-list,
@@ -305,12 +314,15 @@ body {
 }
 
 .arrow-top {
+  width: 45px;
+  height: 45px;
   position: fixed;
   top: 15px;
   background-color: #dddddd;
   border: none;
   color: #ffffff;
   font-size: 35px;
+  text-align: center;
   cursor: pointer;
   z-index: 998;
   -webkit-transition: all 0.1s;
