@@ -21,6 +21,14 @@
     }
     newWorkerElement.querySelector('.worker-item__phone').textContent = element.phone;
 
+    var birthdayElement = newWorkerElement.querySelector('.worker-item__birthday');
+
+    if (element.birthday) {
+      birthdayElement.textContent = element.birthday;
+    } else {
+      birthdayElement.remove();
+    }
+
     // Функция открытия большой фотографии
     var onAvatarClick = function () {
       insertWorker(element);

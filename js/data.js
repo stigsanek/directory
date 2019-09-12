@@ -9,7 +9,8 @@
         departament: 'Руководство',
         position: 'Директор',
         rang: 1,
-        phone: '100'
+        phone: '100',
+        birthday: '1 апреля'
       },
       {
         photo: 'img/photos/default_avatar.png',
@@ -17,7 +18,8 @@
         departament: 'Руководство',
         position: 'Заместитель директора',
         rang: 2,
-        phone: '101'
+        phone: '101',
+        birthday: '2 апреля'
       },
       {
         photo: 'img/photos/default_avatar.png',
@@ -26,6 +28,7 @@
         position: 'Секретарь руководителя',
         rang: 3,
         phone: '103',
+        birthday: '3 апреля',
         secretary: 'Приемная'
       },
       {
@@ -34,7 +37,8 @@
         departament: 'Отдел продаж',
         position: 'Начальник отдела',
         rang: 4,
-        phone: '104'
+        phone: '104',
+        birthday: '4 апреля'
       },
       {
         photo: 'img/photos/default_avatar.png',
@@ -42,7 +46,8 @@
         departament: 'Отдел продаж',
         position: 'Менеджер по продажам',
         rang: 6,
-        phone: '105'
+        phone: '105',
+        birthday: '5 апреля'
       },
       {
         photo: 'img/photos/default_avatar.png',
@@ -50,7 +55,8 @@
         departament: 'Отдел разработки',
         position: 'Начальник отдела',
         rang: 4,
-        phone: '106'
+        phone: '106',
+        birthday: '6 апреля'
       },
       {
         photo: 'img/photos/default_avatar.png',
@@ -58,7 +64,8 @@
         departament: 'Отдел разработки',
         position: 'Разработчик',
         rang: 6,
-        phone: '107'
+        phone: '107',
+        birthday: '7 апреля'
       },
       {
         photo: 'img/photos/default_avatar.png',
@@ -66,7 +73,8 @@
         departament: 'Отдел кадров',
         position: 'Заместитель начальника отдела',
         rang: 5,
-        phone: '108'
+        phone: '108',
+        birthday: '8 апреля'
       },
       {
         photo: 'img/photos/default_avatar.png',
@@ -74,7 +82,8 @@
         departament: 'Отдел кадров',
         position: 'HR-менеджер',
         rang: 6,
-        phone: '109'
+        phone: '109',
+        birthday: '9 апреля'
       },
       {
         photo: 'img/photos/default_avatar.png',
@@ -82,7 +91,8 @@
         departament: 'Отдел аналитики',
         position: 'Начальник отдела',
         rang: 4,
-        phone: '110'
+        phone: '110',
+        birthday: '10 апреля'
       },
       {
         photo: 'img/photos/default_avatar.png',
@@ -90,7 +100,8 @@
         departament: 'Отдел аналитики',
         position: 'Главный аналитик',
         rang: 6,
-        phone: '111'
+        phone: '111',
+        birthday: '12 апреля'
       }
     ]
   };

@@ -227,26 +227,36 @@ body {
   color: #ffffff;
 }
 
-.worker-item__phone {
+.worker-item__phone,
+.worker-item__birthday {
   position: relative;
   padding-left: 30px;
 }
 
-.worker-item__phone::before {
-  top: -1px;
+.worker-item__phone::before,
+.worker-item__birthday::before {
+  top: 0;
   left: 0;
   content: "";
   position: absolute;
-  width: 24px;
-  height: 24px;
-  background-image: url("../img/phone.png");
-  background-size: 24px;
+  width: 20px;
+  height: 20px;
+  background-size: 20px;
   background-repeat: no-repeat;
 }
 
-.worker-item__phone:hover::before {
+.worker-item__phone:hover::before,
+.worker-item__birthday:hover::before {
   -webkit-animation: move-phone 0.5s;
           animation: move-phone 0.5s;
+}
+
+.worker-item__phone::before {
+  background-image: url("../img/icon-phone.svg");
+}
+
+.worker-item__birthday::before {
+  background-image: url("../img/icon-birthday.svg");
 }
 
 .big-photo__container {
