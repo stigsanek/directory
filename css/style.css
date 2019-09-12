@@ -62,9 +62,9 @@ body {
 
 .main-form__search {
   width: 200px;
+  height: 35px;
   padding: 8px;
   font-size: 13px;
-  line-height: 1;
   border-radius: 0;
   border: 2px solid #eeeeee;
   background-color: transparent;
@@ -317,15 +317,12 @@ body {
 }
 
 .arrow-top {
-  width: 45px;
-  height: 45px;
   position: fixed;
   top: 15px;
   background-color: #dddddd;
   border: none;
   color: #ffffff;
   font-size: 35px;
-  text-align: center;
   cursor: pointer;
   z-index: 998;
   -webkit-transition: all 0.1s;
