@@ -52,7 +52,6 @@ body {
   margin: 0;
   padding: 0;
   max-width: 65%;
-  text-align: center;
   font-size: 25px;
 }
 
@@ -325,7 +324,6 @@ body {
 
 .modal-window__text {
   line-height: 2;
-  text-align: justify;
 }
 
 .birthday-container {
@@ -399,6 +397,10 @@ body {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+  }
+
+  .main-header__title {
+    text-align: center;
   }
 
   .main-header__logo {
