@@ -8,7 +8,7 @@
 
   // Определение текущей даты
   var date = new Date();
-  var currenDate = date.toLocaleDateString().toString().slice(0, 5);
+  var currentDate = date.toLocaleDateString().toString().slice(0, 5);
 
   // Функция конвертации даты в текстовый формат
   var convertMonth = function (element) {
@@ -74,7 +74,7 @@
 
     if (element.birthday) {
       birthdayElement.textContent = convertMonth(element.birthday);
-      if (element.birthday === currenDate) {
+      if (element.birthday === currentDate) {
         birthdayWorkers.push(element);
       }
     } else {
