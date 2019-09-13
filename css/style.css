@@ -32,8 +32,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 50px;
-  padding-top: 35px;
+  margin-bottom: 35px;
+  align-items: flex-end;
+  align-content: flex-end;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: center;
@@ -43,22 +44,18 @@ body {
 
 .main-header__logo {
   margin-right: 20px;
-  margin-top: -8px;
-  margin-bottom: 10px;
+  margin-bottom: -4px;
 }
 
 .main-header__title {
   margin: 0;
   padding: 0;
-  margin-bottom: 15px;
-  margin-right: 95px;
   text-align: center;
   font-size: 25px;
 }
 
 .main-form {
-  margin-top: 4px;
-  margin-bottom: 50px;
+  margin-left: auto;
 }
 
 .main-form__search {
@@ -90,6 +87,7 @@ body {
 }
 
 .filter-button {
+  margin-top: 50px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -215,7 +213,7 @@ body {
 .worker-item__phone {
   margin: 0;
   padding: 0;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .worker-item__name,
