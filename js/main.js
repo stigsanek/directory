@@ -70,7 +70,13 @@
     } else {
       newWorkerElement.querySelector('.worker-item__departament').textContent = element.departament;
     }
-    newWorkerElement.querySelector('.worker-item__phone').textContent = element.phone;
+
+    var phoneElement = newWorkerElement.querySelector('.worker-item__phone');
+    if (element.phone) {
+      phoneElement.textContent = element.phone;
+    } else {
+      phoneElement.remove();
+    }
 
     var birthdayElement = newWorkerElement.querySelector('.worker-item__birthday');
 

@@ -211,7 +211,8 @@ body {
 .worker-item__name,
 .worker-item__position,
 .worker-item__departament,
-.worker-item__phone {
+.worker-item__phone,
+.worker-item__birthday {
   margin: 0;
   padding: 0;
   margin-bottom: 10px;
