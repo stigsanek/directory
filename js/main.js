@@ -2,9 +2,58 @@
 
 (function () {
   var ARROW_PADDING = 15;
+  var MONTH = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+
+  var bodyElement = document.querySelector('body');
+
+  // Определение текущей даты
+  var date = new Date();
+  var currenDate = date.toLocaleDateString().toString().slice(0, 5);
+
+  // Функция конвертации даты в текстовый формат
+  var convertMonth = function (element) {
+    var day = element.slice(0, 2);
+    var month = element.slice(3, 5);
+    if (month[0] === '0') {
+      month = element.slice(4, 5);
+    }
+    return day + ' ' + MONTH[month - 1];
+  };
+
+  // Обработчик определения дня рождения сотрудников
+  var modalBirthdayElement = bodyElement.querySelector('#birthday');
+  var birthdayWorkers = [];
+
+  var onDocumentDOMContentLoaded = function () {
+    if (birthdayWorkers.length !== 0) {
+      var templateBirthdayElement = bodyElement.querySelector('#worker-birthday').content.querySelector('.birthday-container');
+      var closeBirthdayElement = modalBirthdayElement.querySelector('.button-close');
+      var overlayBirthdayElement = modalBirthdayElement.querySelector('.overlay');
+
+      birthdayWorkers.forEach(item => {
+        var newBirthdayElement = templateBirthdayElement.cloneNode(true);
+        newBirthdayElement.querySelector('.birthday-container__img').style = 'background-image: url("' + item.photo + '");';
+        newBirthdayElement.querySelector('.birthday-container__text').textContent = item.name;
+        closeBirthdayElement.insertAdjacentElement('beforebegin', newBirthdayElement);
+      });
+
+      var onButtonBirthdayClick = function () {
+        modalBirthdayElement.style.display = 'none';
+        closeBirthdayElement.removeEventListener('click', onButtonBirthdayClick);
+        overlayBirthdayElement.removeEventListener('click', onButtonBirthdayClick);
+      };
+
+      closeBirthdayElement.addEventListener('click', onButtonBirthdayClick);
+      overlayBirthdayElement.addEventListener('click', onButtonBirthdayClick);
+      modalBirthdayElement.style.display = 'block';
+    }
+
+    document.removeEventListener('DOMContentLoaded', onDocumentDOMContentLoaded);
+  };
+
+  document.addEventListener('DOMContentLoaded', onDocumentDOMContentLoaded);
 
   // Функция создания карточки сотрудника
-  var bodyElement = document.querySelector('body');
   var workerListElement = bodyElement.querySelector('.worker-list');
   var templateOfficerElement = bodyElement.querySelector('#worker').content.querySelector('.worker-item');
 
@@ -24,7 +73,10 @@
     var birthdayElement = newWorkerElement.querySelector('.worker-item__birthday');
 
     if (element.birthday) {
-      birthdayElement.textContent = element.birthday;
+      birthdayElement.textContent = convertMonth(element.birthday);
+      if (element.birthday === currenDate) {
+        birthdayWorkers.push(element);
+      }
     } else {
       birthdayElement.remove();
     }
