@@ -64,6 +64,7 @@
     var nameElement = newWorkerElement.querySelector('.worker-item__name');
     nameElement.textContent = element.name;
     newWorkerElement.querySelector('.worker-item__position').textContent = element.position;
+
     if (element.secretary) {
       newWorkerElement.querySelector('.worker-item__departament').textContent = element.secretary;
     } else {
@@ -76,7 +77,7 @@
     if (element.birthday) {
       birthdayElement.textContent = convertMonth(element.birthday);
       if (element.birthday === currentDate) {
-        nameElement.classList.add('worker-item__name--ico');
+        nameElement.innerHTML += '<span class="worker-item__name--ico"></span>';
         birthdayWorkers.push(element);
       }
     } else {
