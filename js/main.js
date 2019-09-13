@@ -61,7 +61,8 @@
     var newWorkerElement = templateOfficerElement.cloneNode(true);
     var avatarElement = newWorkerElement.querySelector('.worker-item__avatar');
     avatarElement.style = 'background-image: url("' + element.photo + '");';
-    newWorkerElement.querySelector('.worker-item__name').textContent = element.name;
+    var nameElement = newWorkerElement.querySelector('.worker-item__name');
+    nameElement.textContent = element.name;
     newWorkerElement.querySelector('.worker-item__position').textContent = element.position;
     if (element.secretary) {
       newWorkerElement.querySelector('.worker-item__departament').textContent = element.secretary;
@@ -75,6 +76,7 @@
     if (element.birthday) {
       birthdayElement.textContent = convertMonth(element.birthday);
       if (element.birthday === currentDate) {
+        nameElement.classList.add('worker-item__name--ico');
         birthdayWorkers.push(element);
       }
     } else {

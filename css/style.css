@@ -223,6 +223,11 @@ body {
   font-size: 20px;
 }
 
+.worker-item__name {
+  position: relative;
+  padding-right: 35px;
+}
+
 .worker-item__name--mark {
   background-color: #0099ff;
   color: #ffffff;
@@ -258,6 +263,17 @@ body {
 
 .worker-item__birthday::before {
   background-image: url("../img/icon-birthday.svg");
+}
+
+.worker-item__name--ico::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25px;
+  height: 25px;
+  background-image: url("../img/icon-cake.svg");
+  background-size: 25px;
 }
 
 .big-photo__container {
