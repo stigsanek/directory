@@ -51,6 +51,7 @@ body {
 .main-header__title {
   margin: 0;
   padding: 0;
+  max-width: 65%;
   text-align: center;
   font-size: 25px;
 }
@@ -382,7 +383,7 @@ body {
   transition: transform 0.1s, -webkit-transform 0.1s;
 }
 
-@media(max-width: 900px) {
+@media(max-width: 990px) {
   .main-header {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
