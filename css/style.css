@@ -126,7 +126,7 @@ body {
 .filter-button__item:active,
 .main-form__button:active,
 .arrow-top:active {
-  background-color: #0099ff !important;
+  background-color: #483d8b !important;
   -webkit-transform: scale(1.05);
       -ms-transform: scale(1.05);
           transform: scale(1.05);
@@ -134,7 +134,7 @@ body {
 }
 
 .filter-button__item--active {
-  background-color: #0099ff !important;
+  background-color: #483d8b !important;
   -webkit-transform: scale(1.05);
       -ms-transform: scale(1.05);
           transform: scale(1.05);
@@ -236,7 +236,7 @@ body {
 }
 
 .worker-item__name--mark {
-  background-color: #0099ff;
+  background-color: #483d8b;
   color: #ffffff;
 }
 
