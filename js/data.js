@@ -2,7 +2,7 @@
 
 (function () {
   window.data = {
-    workers : [
+    workers: [
       {
         photo: 'img/photos/default_avatar.png',
         name: 'Дейенерис Таргариен',

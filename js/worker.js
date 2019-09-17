@@ -11,7 +11,7 @@
       var closeBirthdayElement = modalBirthdayElement.querySelector('.button-close');
       var overlayBirthdayElement = modalBirthdayElement.querySelector('.overlay');
 
-      birthdayWorkers.forEach(item => {
+      birthdayWorkers.forEach(function (item) {
         var newBirthdayElement = templateBirthdayElement.cloneNode(true);
         newBirthdayElement.querySelector('.birthday-container__img').style = 'background-image: url("' + item.photo + '");';
         newBirthdayElement.querySelector('.birthday-container__text').textContent = item.name;
@@ -26,7 +26,7 @@
       };
 
       var onModalBirthdayElementEscPress = function (evt) {
-        window.util.pressEsc(evt, onButtonBirthdayClick)
+        window.util.pressEsc(evt, onButtonBirthdayClick);
       };
 
       closeBirthdayElement.addEventListener('click', onButtonBirthdayClick);
@@ -111,7 +111,7 @@
     };
 
     var onPhotoEscPress = function (evt) {
-      window.util.pressEsc(evt, onPhotoCloseClick)
+      window.util.pressEsc(evt, onPhotoCloseClick);
     };
 
     closePhotoElement.addEventListener('click', onPhotoCloseClick);

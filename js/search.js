@@ -20,7 +20,7 @@
   };
 
   var onModalSeacrhElementEscPress = function (evt) {
-    window.util.pressEsc(evt, onButtonSeacrhClick)
+    window.util.pressEsc(evt, onButtonSeacrhClick);
   };
 
   var onSearchButtonClick = function () {
@@ -38,7 +38,7 @@
         if (index !== -1) {
           targetElement = requiredElement[i];
           targetElement.classList.add('worker-item__name--mark');
-          targetElement.scrollIntoView({block: "center"});
+          targetElement.scrollIntoView({block: 'center'});
           searchFlag = true;
         }
       }
@@ -53,7 +53,7 @@
 
     // Функция отмены выделения найденного текста
     var onRequiredElementNoneMark = function () {
-      requiredElement.forEach(item => {
+      requiredElement.forEach(function (item) {
         item.classList.remove('worker-item__name--mark');
       });
       document.removeEventListener('mousedown', onRequiredElementNoneMark);

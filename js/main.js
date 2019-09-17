@@ -14,10 +14,10 @@
     if (Array.isArray(data)) {
       var fragmentElement = document.createDocumentFragment();
 
-      data.forEach(item => {
-          newNodeElement = window.worker.create(item);
-          fragmentElement.appendChild(newNodeElement);
-          workerLists.push(newNodeElement);
+      data.forEach(function (item) {
+        newNodeElement = window.worker.create(item);
+        fragmentElement.appendChild(newNodeElement);
+        workerLists.push(newNodeElement);
       });
 
       workerListElement.appendChild(fragmentElement);
@@ -29,14 +29,14 @@
 
   // Функция удаления карточек из DOM
   var removeWorker = function () {
-    workerLists.forEach(item => {
+    workerLists.forEach(function (item) {
       item.remove();
     });
   };
 
   // Cортировка данных по должности, алфавиту и ренедеринг на страницу
   var data = window.data.workers;
-  var sortData = data.sort((itemFirst, itemSecond) => {
+  var sortData = data.sort(function (itemFirst, itemSecond) {
     return (itemFirst.rang > itemSecond.rang) - (itemSecond.rang > itemFirst.rang) || (itemSecond.name < itemFirst.name) - (itemFirst.name < itemSecond.name);
   });
   insertWorker(sortData);
@@ -62,7 +62,7 @@
   };
 
   var onModalAttentionElementEscPress = function (evt) {
-    window.util.pressEsc(evt, onButtonAttentionClick)
+    window.util.pressEsc(evt, onButtonAttentionClick);
   };
 
   // Функция фильтрации сотрудников по отделам
@@ -82,20 +82,20 @@
       insertWorker(sortData);
       inputTextElement.removeEventListener('focus', onInputTextFocus);
     } else {
-      var filterData = sortData.filter(item => {
+      var filterData = sortData.filter(function (item) {
         return item.departament === departament;
       });
       removeWorker();
       insertWorker(filterData);
     }
 
-    filterButtonsElement.forEach(item => {
+    filterButtonsElement.forEach(function (item) {
       item.classList.remove('filter-button__item--active');
     });
     evt.target.classList.add('filter-button__item--active');
   };
 
-  filterButtonsElement.forEach(item => {
+  filterButtonsElement.forEach(function (item) {
     item.addEventListener('click', function (evt) {
       onFilterButtonClick(evt, item.value);
     });
