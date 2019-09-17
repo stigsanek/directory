@@ -22,7 +22,7 @@
 
       workerListElement.appendChild(fragmentElement);
     } else {
-      newNodeElement = window.worker.show(data);
+      newNodeElement = window.worker.showPhoto(data);
       wrapperElement.insertAdjacentElement('afterEnd', newNodeElement);
     }
   };

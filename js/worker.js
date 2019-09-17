@@ -123,6 +123,6 @@
 
   window.worker = {
     create: createWorker,
-    show: createPhoto
+    showPhoto: createPhoto
   };
 })();
