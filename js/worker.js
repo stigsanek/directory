@@ -40,7 +40,7 @@
 
   document.addEventListener('DOMContentLoaded', onDocumentDOMContentLoaded);
 
-  // Функция создания карточки сотрудника
+  // Метод создания карточки сотрудника
   var templateOfficerElement = document.querySelector('#worker').content.querySelector('.worker-item');
   var currentPhoto = null;
 
@@ -90,7 +90,7 @@
     return newWorkerElement;
   };
 
-  // Функция создания большой фотографии
+  // Метод создания большой фотографии
   var templateBigPhotoElement = document.querySelector('#photo').content.querySelector('.big-photo');
 
   var createPhoto = function (element) {
