@@ -1,0 +1,25 @@
+{
+  "name": "directory",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cправочник сотрудников организации",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:stigsanek/directory.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stigsanek/directory.git/issues"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-htmlacademy": "0.5.2"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "scripts": {
+    "test": "eslint js/"
+  },
+  "engines": {
+    "node": "8.11"
+  }
+}
