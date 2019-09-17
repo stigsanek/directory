@@ -4,7 +4,8 @@
 
 ---
 
-_Не удаляйте и не обращайте внимание на файл:_ `.editorconfig`.
+_Не обращайте внимание на файлы:_<br>
+_`.editorconfig`, `.eslintrc`, `.gitignore`, `package-lock.json`, `package.json`._
 
 ---
 
