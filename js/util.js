@@ -3,6 +3,7 @@
 (function () {
   var MONTH = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
   var ARROW_PADDING = 15;
+  var ESC_KEYCODE = 27;
 
   // Определение текущей даты
   var date = new Date();
@@ -35,8 +36,16 @@
     arrowTopElement.hidden = (pageYOffset < document.documentElement.clientHeight);
   });
 
+  // Метод выполнения функций по нажатию ESC
+  var pressEscKey = function (evt, action) {
+    if (evt.keyCode === ESC_KEYCODE) {
+      action();
+    }
+  };
+
   window.util = {
     date: currentDate,
-    convert: convertMonth
+    convert: convertMonth,
+    pressEsc: pressEscKey
   };
 })();

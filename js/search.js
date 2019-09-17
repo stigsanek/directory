@@ -16,6 +16,11 @@
     modalSeacrhElement.style.display = 'none';
     closeSeacrhElement.removeEventListener('click', onButtonSeacrhClick);
     overlaySeacrhElement.removeEventListener('click', onButtonSeacrhClick);
+    document.removeEventListener('keydown', onModalSeacrhElementEscPress);
+  };
+
+  var onModalSeacrhElementEscPress = function (evt) {
+    window.util.pressEsc(evt, onButtonSeacrhClick)
   };
 
   var onSearchButtonClick = function () {
@@ -42,6 +47,7 @@
         showModal();
         closeSeacrhElement.addEventListener('click', onButtonSeacrhClick);
         overlaySeacrhElement.addEventListener('click', onButtonSeacrhClick);
+        document.addEventListener('keydown', onModalSeacrhElementEscPress);
       }
     }
 

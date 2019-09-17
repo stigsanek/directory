@@ -58,6 +58,11 @@
     modalAttentionElement.style.display = 'none';
     closeAttentionElement.removeEventListener('click', onButtonAttentionClick);
     overlayAttentionElement.removeEventListener('click', onButtonAttentionClick);
+    document.removeEventListener('keydown', onModalAttentionElementEscPress);
+  };
+
+  var onModalAttentionElementEscPress = function (evt) {
+    window.util.pressEsc(evt, onButtonAttentionClick)
   };
 
   // Функция фильтрации сотрудников по отделам
@@ -69,6 +74,7 @@
       inputTextElement.addEventListener('focus', onInputTextFocus);
       closeAttentionElement.addEventListener('click', onButtonAttentionClick);
       overlayAttentionElement.addEventListener('click', onButtonAttentionClick);
+      document.addEventListener('keydown', onModalAttentionElementEscPress);
     }
 
     if (evt.target === btnAllElement) {

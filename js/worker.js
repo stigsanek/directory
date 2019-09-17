@@ -22,10 +22,16 @@
         modalBirthdayElement.style.display = 'none';
         closeBirthdayElement.removeEventListener('click', onButtonBirthdayClick);
         overlayBirthdayElement.removeEventListener('click', onButtonBirthdayClick);
+        document.removeEventListener('keydown', onModalBirthdayElementEscPress);
+      };
+
+      var onModalBirthdayElementEscPress = function (evt) {
+        window.util.pressEsc(evt, onButtonBirthdayClick)
       };
 
       closeBirthdayElement.addEventListener('click', onButtonBirthdayClick);
       overlayBirthdayElement.addEventListener('click', onButtonBirthdayClick);
+      document.addEventListener('keydown', onModalBirthdayElementEscPress);
       modalBirthdayElement.style.display = 'block';
     }
 
@@ -100,11 +106,17 @@
       newPhotoElement.remove();
       closePhotoElement.removeEventListener('click', onPhotoCloseClick);
       overlayPhotoElement.removeEventListener('click', onPhotoCloseClick);
+      document.removeEventListener('keydown', onPhotoEscPress);
       currentPhoto = null;
+    };
+
+    var onPhotoEscPress = function (evt) {
+      window.util.pressEsc(evt, onPhotoCloseClick)
     };
 
     closePhotoElement.addEventListener('click', onPhotoCloseClick);
     overlayPhotoElement.addEventListener('click', onPhotoCloseClick);
+    document.addEventListener('keydown', onPhotoEscPress);
 
     return newPhotoElement;
   };
