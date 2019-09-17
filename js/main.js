@@ -56,6 +56,7 @@
   // Функция создания карточки сотрудника
   var workerListElement = bodyElement.querySelector('.worker-list');
   var templateOfficerElement = bodyElement.querySelector('#worker').content.querySelector('.worker-item');
+  var currentCard = null;
 
   var createWorker = function (element) {
     var newWorkerElement = templateOfficerElement.cloneNode(true);
@@ -92,6 +93,9 @@
 
     // Функция открытия большой фотографии
     var onAvatarClick = function () {
+      if (currentCard) {
+        currentCard.remove();
+      }
       insertWorker(element);
     };
 
@@ -106,6 +110,7 @@
   var createPhoto = function (element) {
     var newPhotoElement = templateBigPhotoElement.cloneNode(true);
     newPhotoElement.querySelector('.big-photo__container').style = 'background-image: url("' + element.photo + '");';
+    currentCard = newPhotoElement;
 
     // Функция закрытия большой фотографии
     var closePhotoElement = newPhotoElement.querySelector('.button-close');
@@ -115,6 +120,7 @@
       newPhotoElement.remove();
       closePhotoElement.removeEventListener('click', onPhotoCloseClick);
       overlayPhotoElement.removeEventListener('click', onPhotoCloseClick);
+      currentCard = null;
     };
 
     closePhotoElement.addEventListener('click', onPhotoCloseClick);
