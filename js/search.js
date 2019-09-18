@@ -16,10 +16,10 @@
     modalSeacrhElement.style.display = 'none';
     closeSeacrhElement.removeEventListener('click', onButtonSeacrhClick);
     overlaySeacrhElement.removeEventListener('click', onButtonSeacrhClick);
-    document.removeEventListener('keydown', onModalSeacrhElementEscPress);
+    document.removeEventListener('keydown', onModalSeacrhEscPress);
   };
 
-  var onModalSeacrhElementEscPress = function (evt) {
+  var onModalSeacrhEscPress = function (evt) {
     window.util.pressEsc(evt, onButtonSeacrhClick);
   };
 
@@ -47,22 +47,22 @@
         showModal();
         closeSeacrhElement.addEventListener('click', onButtonSeacrhClick);
         overlaySeacrhElement.addEventListener('click', onButtonSeacrhClick);
-        document.addEventListener('keydown', onModalSeacrhElementEscPress);
+        document.addEventListener('keydown', onModalSeacrhEscPress);
       }
     }
 
     // Функция отмены выделения найденного текста
-    var onRequiredElementNoneMark = function () {
+    var onRequiredNoneMark = function () {
       requiredElement.forEach(function (item) {
         item.classList.remove('worker-item__name--mark');
       });
-      document.removeEventListener('mousedown', onRequiredElementNoneMark);
-      inputTextElement.removeEventListener('input', onRequiredElementNoneMark);
+      document.removeEventListener('mousedown', onRequiredNoneMark);
+      inputTextElement.removeEventListener('input', onRequiredNoneMark);
     };
 
     if (targetElement) {
-      document.addEventListener('mousedown', onRequiredElementNoneMark);
-      inputTextElement.addEventListener('input', onRequiredElementNoneMark);
+      document.addEventListener('mousedown', onRequiredNoneMark);
+      inputTextElement.addEventListener('input', onRequiredNoneMark);
     }
   };
 

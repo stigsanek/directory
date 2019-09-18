@@ -58,10 +58,10 @@
     modalAttentionElement.style.display = 'none';
     closeAttentionElement.removeEventListener('click', onButtonAttentionClick);
     overlayAttentionElement.removeEventListener('click', onButtonAttentionClick);
-    document.removeEventListener('keydown', onModalAttentionElementEscPress);
+    document.removeEventListener('keydown', onModalAttentionEscPress);
   };
 
-  var onModalAttentionElementEscPress = function (evt) {
+  var onModalAttentionEscPress = function (evt) {
     window.util.pressEsc(evt, onButtonAttentionClick);
   };
 
@@ -74,7 +74,7 @@
       inputTextElement.addEventListener('focus', onInputTextFocus);
       closeAttentionElement.addEventListener('click', onButtonAttentionClick);
       overlayAttentionElement.addEventListener('click', onButtonAttentionClick);
-      document.addEventListener('keydown', onModalAttentionElementEscPress);
+      document.addEventListener('keydown', onModalAttentionEscPress);
     }
 
     if (evt.target === btnAllElement) {

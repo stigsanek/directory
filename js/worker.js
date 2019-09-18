@@ -22,16 +22,16 @@
         modalBirthdayElement.style.display = 'none';
         closeBirthdayElement.removeEventListener('click', onButtonBirthdayClick);
         overlayBirthdayElement.removeEventListener('click', onButtonBirthdayClick);
-        document.removeEventListener('keydown', onModalBirthdayElementEscPress);
+        document.removeEventListener('keydown', onModalBirthdayEscPress);
       };
 
-      var onModalBirthdayElementEscPress = function (evt) {
+      var onModalBirthdayEscPress = function (evt) {
         window.util.pressEsc(evt, onButtonBirthdayClick);
       };
 
       closeBirthdayElement.addEventListener('click', onButtonBirthdayClick);
       overlayBirthdayElement.addEventListener('click', onButtonBirthdayClick);
-      document.addEventListener('keydown', onModalBirthdayElementEscPress);
+      document.addEventListener('keydown', onModalBirthdayEscPress);
       modalBirthdayElement.style.display = 'block';
     }
 
