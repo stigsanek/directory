@@ -51,6 +51,7 @@
   var onInputTextFocus = function () {
     modalAttentionElement.style.display = 'block';
     searchModalFlag = true;
+    window.util.block(closeAttentionElement);
     inputTextElement.removeEventListener('focus', onInputTextFocus);
   };
 
@@ -59,6 +60,7 @@
     closeAttentionElement.removeEventListener('click', onButtonAttentionClick);
     overlayAttentionElement.removeEventListener('click', onButtonAttentionClick);
     document.removeEventListener('keydown', onModalAttentionEscPress);
+    window.util.unblock();
   };
 
   var onModalAttentionEscPress = function (evt) {

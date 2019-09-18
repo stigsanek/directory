@@ -23,16 +23,18 @@
         closeBirthdayElement.removeEventListener('click', onButtonBirthdayClick);
         overlayBirthdayElement.removeEventListener('click', onButtonBirthdayClick);
         document.removeEventListener('keydown', onModalBirthdayEscPress);
+        window.util.unblock();
       };
 
       var onModalBirthdayEscPress = function (evt) {
         window.util.pressEsc(evt, onButtonBirthdayClick);
       };
 
+      modalBirthdayElement.style.display = 'block';
       closeBirthdayElement.addEventListener('click', onButtonBirthdayClick);
       overlayBirthdayElement.addEventListener('click', onButtonBirthdayClick);
       document.addEventListener('keydown', onModalBirthdayEscPress);
-      modalBirthdayElement.style.display = 'block';
+      window.util.block(closeBirthdayElement);
     }
 
     document.removeEventListener('DOMContentLoaded', onDocumentDOMContentLoaded);
@@ -42,7 +44,6 @@
 
   // Метод создания карточки сотрудника
   var templateOfficerElement = document.querySelector('#worker').content.querySelector('.worker-item');
-  var currentPhoto = null;
 
   var createWorker = function (element) {
     var newWorkerElement = templateOfficerElement.cloneNode(true);
@@ -79,9 +80,6 @@
 
     // Функция открытия большой фотографии
     var onAvatarClick = function () {
-      if (currentPhoto) {
-        currentPhoto.remove();
-      }
       window.main.render(element);
     };
 
@@ -96,7 +94,6 @@
   var createPhoto = function (element) {
     var newPhotoElement = templateBigPhotoElement.cloneNode(true);
     newPhotoElement.querySelector('.big-photo__container').style = 'background-image: url("' + element.photo + '");';
-    currentPhoto = newPhotoElement;
 
     // Функция закрытия большой фотографии
     var closePhotoElement = newPhotoElement.querySelector('.button-close');
@@ -107,7 +104,7 @@
       closePhotoElement.removeEventListener('click', onPhotoCloseClick);
       overlayPhotoElement.removeEventListener('click', onPhotoCloseClick);
       document.removeEventListener('keydown', onPhotoEscPress);
-      currentPhoto = null;
+      window.util.unblock();
     };
 
     var onPhotoEscPress = function (evt) {
@@ -117,6 +114,7 @@
     closePhotoElement.addEventListener('click', onPhotoCloseClick);
     overlayPhotoElement.addEventListener('click', onPhotoCloseClick);
     document.addEventListener('keydown', onPhotoEscPress);
+    window.util.block(closePhotoElement);
 
     return newPhotoElement;
   };

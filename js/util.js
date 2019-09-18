@@ -43,9 +43,35 @@
     }
   };
 
+  // Методы блокировки/разблокировки фокуса на элементах при взаимодействии с модальным окном
+  var allElement = null;
+  var onElementFocus = null;
+
+  var restrictFocus = function (focusElement) {
+    onElementFocus = function (evt) {
+      if (evt.target !== focusElement) {
+        evt.stopPropagation();
+        focusElement.focus();
+      }
+    };
+
+    allElement = document.querySelectorAll("*");
+    allElement.forEach(function (item) {
+      item.addEventListener('focus', onElementFocus);
+    });
+  };
+
+  var returnFocus = function () {
+    allElement.forEach(function (item) {
+      item.removeEventListener('focus', onElementFocus);
+    });
+  };
+
   window.util = {
     date: currentDate,
     convert: convertMonth,
-    pressEsc: pressEscKey
+    pressEsc: pressEscKey,
+    block: restrictFocus,
+    unblock: returnFocus
   };
 })();
