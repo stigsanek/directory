@@ -23,7 +23,8 @@
         closeBirthdayElement.removeEventListener('click', onButtonBirthdayClick);
         overlayBirthdayElement.removeEventListener('click', onButtonBirthdayClick);
         document.removeEventListener('keydown', onModalBirthdayEscPress);
-        window.util.unblock();
+        window.util.unblockFocus();
+        window.util.unblockOverflow();
       };
 
       var onModalBirthdayEscPress = function (evt) {
@@ -34,7 +35,8 @@
       closeBirthdayElement.addEventListener('click', onButtonBirthdayClick);
       overlayBirthdayElement.addEventListener('click', onButtonBirthdayClick);
       document.addEventListener('keydown', onModalBirthdayEscPress);
-      window.util.block(closeBirthdayElement);
+      window.util.blockFocus(closeBirthdayElement);
+      window.util.blockOverflow();
     }
 
     document.removeEventListener('DOMContentLoaded', onDocumentDOMContentLoaded);
@@ -104,7 +106,8 @@
       closePhotoElement.removeEventListener('click', onPhotoCloseClick);
       overlayPhotoElement.removeEventListener('click', onPhotoCloseClick);
       document.removeEventListener('keydown', onPhotoEscPress);
-      window.util.unblock();
+      window.util.unblockFocus();
+      window.util.unblockOverflow();
     };
 
     var onPhotoEscPress = function (evt) {
@@ -114,7 +117,8 @@
     closePhotoElement.addEventListener('click', onPhotoCloseClick);
     overlayPhotoElement.addEventListener('click', onPhotoCloseClick);
     document.addEventListener('keydown', onPhotoEscPress);
-    window.util.block(closePhotoElement);
+    window.util.blockFocus(closePhotoElement);
+    window.util.blockOverflow();
 
     return newPhotoElement;
   };

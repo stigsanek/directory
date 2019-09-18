@@ -67,11 +67,22 @@
     });
   };
 
+  // Методы отключения/включения прокрутки документа при всплытии модального окна
+  var addOverflow = function () {
+    bodyElement.classList.add('modal-open');
+  };
+
+  var hiddenOverflow = function () {
+    bodyElement.classList.remove('modal-open');
+  };
+
   window.util = {
     date: currentDate,
     convert: convertMonth,
     pressEsc: pressEscKey,
-    block: restrictFocus,
-    unblock: returnFocus
+    blockFocus: restrictFocus,
+    unblockFocus: returnFocus,
+    blockOverflow: addOverflow,
+    unblockOverflow: hiddenOverflow
   };
 })();

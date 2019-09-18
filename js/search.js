@@ -10,7 +10,8 @@
 
   var showModal = function () {
     modalSeacrhElement.style.display = 'block';
-    window.util.block(closeSeacrhElement);
+    window.util.blockFocus(closeSeacrhElement);
+    window.util.blockOverflow();
   };
 
   var onButtonSeacrhClick = function () {
@@ -18,7 +19,8 @@
     closeSeacrhElement.removeEventListener('click', onButtonSeacrhClick);
     overlaySeacrhElement.removeEventListener('click', onButtonSeacrhClick);
     document.removeEventListener('keydown', onModalSeacrhEscPress);
-    window.util.unblock();
+    window.util.unblockFocus();
+    window.util.unblockOverflow();
   };
 
   var onModalSeacrhEscPress = function (evt) {

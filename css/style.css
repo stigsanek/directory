@@ -356,6 +356,10 @@ body {
   line-height: 2;
 }
 
+.modal-open {
+  overflow: hidden;
+}
+
 .birthday-container {
   display: -webkit-box;
   display: -ms-flexbox;
