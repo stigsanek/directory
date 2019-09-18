@@ -56,7 +56,7 @@
       }
     };
 
-    allElement = document.querySelectorAll("*");
+    allElement = document.querySelectorAll('*');
     allElement.forEach(function (item) {
       item.addEventListener('focus', onElementFocus);
     });
@@ -73,12 +73,15 @@
   };
 
   // Методы отключения/включения прокрутки документа при всплытии модального окна
+  var htmlElement = document.querySelector('html');
   var addOverflow = function () {
     bodyElement.classList.add('modal-open');
+    htmlElement.classList.add('modal-open');
   };
 
   var hiddenOverflow = function () {
     bodyElement.classList.remove('modal-open');
+    htmlElement.classList.remove('modal-open');
   };
 
   window.util = {
