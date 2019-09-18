@@ -52,7 +52,7 @@
     modalAttentionElement.style.display = 'block';
     searchModalFlag = true;
     window.util.block(closeAttentionElement);
-    inputTextElement.removeEventListener('focus', onInputTextFocus);
+    inputTextElement.removeEventListener('input', onInputTextFocus);
   };
 
   var onButtonAttentionClick = function () {
@@ -73,7 +73,7 @@
 
   var onFilterButtonClick = function (evt, departament) {
     if (!searchModalFlag) {
-      inputTextElement.addEventListener('focus', onInputTextFocus);
+      inputTextElement.addEventListener('input', onInputTextFocus);
       closeAttentionElement.addEventListener('click', onButtonAttentionClick);
       overlayAttentionElement.addEventListener('click', onButtonAttentionClick);
       document.addEventListener('keydown', onModalAttentionEscPress);
@@ -82,7 +82,7 @@
     if (evt.target === btnAllElement) {
       removeWorker();
       insertWorker(sortData);
-      inputTextElement.removeEventListener('focus', onInputTextFocus);
+      inputTextElement.removeEventListener('input', onInputTextFocus);
     } else {
       var filterData = sortData.filter(function (item) {
         return item.departament === departament;
