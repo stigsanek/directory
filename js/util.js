@@ -46,6 +46,7 @@
   // Методы блокировки/разблокировки фокуса на элементах при взаимодействии с модальным окном
   var allElement = null;
   var onElementFocus = null;
+  var lastFocus = null;
 
   var restrictFocus = function (focusElement) {
     onElementFocus = function (evt) {
@@ -59,12 +60,16 @@
     allElement.forEach(function (item) {
       item.addEventListener('focus', onElementFocus);
     });
+
+    lastFocus = document.activeElement;
   };
 
   var returnFocus = function () {
     allElement.forEach(function (item) {
       item.removeEventListener('focus', onElementFocus);
     });
+
+    lastFocus.focus();
   };
 
   // Методы отключения/включения прокрутки документа при всплытии модального окна
