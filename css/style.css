@@ -357,6 +357,7 @@ body {
 }
 
 .modal-open {
+  max-height: 100vh;
   overflow: hidden;
 }
 
