@@ -73,7 +73,7 @@
   };
 
   // Методы отключения/включения прокрутки документа при всплытии модального окна
-  var htmlElement = document.querySelectorAll('html');
+  var htmlElement = document.querySelector('html');
 
   var addOverflow = function () {
     bodyElement.classList.add('modal-open');
