@@ -5,7 +5,7 @@
 ---
 
 _Не обращайте внимание на файлы:_<br>
-_`.editorconfig`, `.eslintrc`, `.gitignore`, `package-lock.json`, `package.json`._
+_`.editorconfig`, `.eslintrc`, `.gitignore`, `csscomb.json`, `package-lock.json`, `package.json`._
 
 ---
 

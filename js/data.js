@@ -10,7 +10,7 @@
         position: 'Директор',
         rang: 1,
         phone: '100',
-        birthday: '19.09'
+        birthday: '20.09'
       },
       {
         photo: 'img/photos/default_avatar.png',
