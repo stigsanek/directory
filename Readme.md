@@ -25,6 +25,7 @@ _`.editorconfig`, `.eslintrc`, `.gitignore`, `csscomb.json`, `package-lock.json`
   position: 'Директор',
   rang: 1,
   phone: '100',
+  email: 'got@westeros.com',
   birthday: '01.07'
 }
 ```
