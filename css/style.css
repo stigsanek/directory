@@ -474,15 +474,6 @@ body {
 }
 
 @media(min-width: 480px) {
-  .worker-item__name,
-  .worker-item__position,
-  .worker-item__departament,
-  .worker-item__phone,
-  .worker-item__email,
-  .worker-item__birthday {
-    margin-bottom: 8px;
-  }
-
   .big-photo__container {
     width: 400px;
     height: 500px;
@@ -534,6 +525,15 @@ body {
 
   .worker-item__container {
     width: auto;
+  }
+
+  .worker-item__name,
+  .worker-item__position,
+  .worker-item__departament,
+  .worker-item__phone,
+  .worker-item__email,
+  .worker-item__birthday {
+    margin-bottom: 7px;
   }
 
   .worker-item__name,
