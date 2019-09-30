@@ -68,6 +68,14 @@
       phoneElement.remove();
     }
 
+    var emailElement = newWorkerElement.querySelector('.worker-item__email');
+    if (element.email) {
+      emailElement.textContent = element.email;
+      emailElement.href = "mailto:" + element.email;
+    } else {
+      emailElement.remove();
+    }
+
     var birthdayElement = newWorkerElement.querySelector('.worker-item__birthday');
 
     if (element.birthday) {

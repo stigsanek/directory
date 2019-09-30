@@ -231,10 +231,15 @@ body {
   width: 100%;
 }
 
+.worker-item__email {
+  display: block;
+}
+
 .worker-item__name,
 .worker-item__position,
 .worker-item__departament,
 .worker-item__phone,
+.worker-item__email,
 .worker-item__birthday {
   margin: 0;
   margin-bottom: 5px;
@@ -254,6 +259,7 @@ body {
 }
 
 .worker-item__phone,
+.worker-item__email,
 .worker-item__birthday {
   position: relative;
 
@@ -261,6 +267,7 @@ body {
 }
 
 .worker-item__phone::before,
+.worker-item__email::before,
 .worker-item__birthday::before {
   content: "";
   position: absolute;
@@ -275,6 +282,7 @@ body {
 }
 
 .worker-item__phone:hover::before,
+.worker-item__email:hover::before,
 .worker-item__birthday:hover::before {
   -webkit-animation: move-ico 0.5s;
           animation: move-ico 0.5s;
@@ -282,6 +290,10 @@ body {
 
 .worker-item__phone::before {
   background-image: url("../img/icon-phone.svg");
+}
+
+.worker-item__email::before {
+  background-image: url("../img/icon-email.svg");
 }
 
 .worker-item__birthday::before {
@@ -466,8 +478,9 @@ body {
   .worker-item__position,
   .worker-item__departament,
   .worker-item__phone,
+  .worker-item__email,
   .worker-item__birthday {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
   .big-photo__container {

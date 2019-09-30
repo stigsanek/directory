@@ -10,6 +10,7 @@
         position: 'Директор',
         rang: 1,
         phone: '100',
+        email: 'got@westeros.com',
         birthday: '20.09'
       },
       {
@@ -19,6 +20,7 @@
         position: 'Заместитель директора',
         rang: 2,
         phone: '101',
+        email: 'got@westeros.com',
         birthday: '15.02'
       },
       {
@@ -28,6 +30,7 @@
         position: 'Секретарь руководителя',
         rang: 3,
         phone: '103',
+        email: 'got@westeros.com',
         birthday: '16.01',
         secretary: 'Приемная'
       },
@@ -38,6 +41,7 @@
         position: 'Начальник отдела',
         rang: 4,
         phone: '104',
+        email: 'got@westeros.com',
         birthday: '30.05'
       },
       {
@@ -47,6 +51,7 @@
         position: 'Менеджер по продажам',
         rang: 6,
         phone: '105',
+        email: 'got@westeros.com',
         birthday: '01.11'
       },
       {
@@ -56,6 +61,7 @@
         position: 'Начальник отдела',
         rang: 4,
         phone: '106',
+        email: 'got@westeros.com',
         birthday: '02.08'
       },
       {
@@ -65,6 +71,7 @@
         position: 'Разработчик',
         rang: 6,
         phone: '107',
+        email: 'got@westeros.com',
         birthday: '09.03'
       },
       {
@@ -74,6 +81,7 @@
         position: 'Заместитель начальника отдела',
         rang: 5,
         phone: '108',
+        email: 'got@westeros.com',
         birthday: '17.12'
       },
       {
@@ -83,6 +91,7 @@
         position: 'HR-менеджер',
         rang: 6,
         phone: '109',
+        email: 'got@westeros.com',
         birthday: '30.07'
       },
       {
@@ -92,6 +101,7 @@
         position: 'Начальник отдела',
         rang: 4,
         phone: '110',
+        email: 'got@westeros.com',
         birthday: '10.04'
       },
       {
@@ -101,6 +111,7 @@
         position: 'Главный аналитик',
         rang: 6,
         phone: '111',
+        email: 'got@westeros.com',
         birthday: '13.09'
       }
     ]
