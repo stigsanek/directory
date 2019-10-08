@@ -58,9 +58,6 @@
 
   var onButtonAttentionClick = function () {
     modalAttentionElement.style.display = 'none';
-    closeAttentionElement.removeEventListener('click', onButtonAttentionClick);
-    overlayAttentionElement.removeEventListener('click', onButtonAttentionClick);
-    document.removeEventListener('keydown', onModalAttentionEscPress);
     window.util.unblockFocus();
     window.util.unblockOverflow();
   };
